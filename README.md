@@ -1,7 +1,23 @@
+### Description
+In this repository can be found the test to Global Media and Entertainment Limited company with the following steps:
+* Open site https://magento.softwaretestingboard.com/
+* Add to cart 4 - Gwyn Endurance Tee Medium Green
+* Address should United Kingdom
+* Check cart total is $92.00 (discount applied)
+* Update the Quantity of  Gwyn Endurance Tee Medium Green to 3
+* Add to cart 1 - Gwyn Endurance Tee Small Yellow
+* Add to cart 1 Quest Lumaflex™ Band
+* Check cart total is $116.00
+
+This test scenario is writen on Carina testing framework(check bellow how can be set up the local environment).
+Moreover after research in the functionality the last step(Check cart total is $116.00) cannot be satisfied. If we want to deliver the products to United Kingdom, we have fixed shipping of $25.00. The price of all products is $115.00 and the final price of the cart is $140.00. 
+On the other hand if the shipping country is United States, the shipping fee is either $0, or $25.00. Either way the price is not the same as the one in the requirements - $116.00. I have checked the rest of the countries and the situation was similar with them. So the test case will be negative in every situation.
+
+-------------------------
 ### Getting started
 * Install and configure JDK 11
 * Install and configure [Apache Maven 3.6.0+](http://maven.apache.org/)
-* Download and start the latest [Selenium standalone server](http://www.seleniumhq.org/download/)
+* Download and start the latest [Selenium standalone server] on port 4545 (http://www.seleniumhq.org/download/)
 * Download the latest version of [Eclipse](http://www.eclipse.org/downloads/) and install [TestNG plugin](http://testng.org/doc/download.html)
 * [Read Carina documentation](https://zebrunner.github.io/carina/)
 
