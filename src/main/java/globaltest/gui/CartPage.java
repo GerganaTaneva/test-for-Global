@@ -37,19 +37,17 @@ public class CartPage extends AbstractPage {
     }
 
     public void updateQuantityOfGreenGwynItem() {
-//        if(shippingHeading.isClickable() && this.shippingCountry.isVisible()) {
-            this.shippingHeading.click();
-            this.shippingCountry.click();
-            this.unitedKingdomOption.click();
-            pause(5);
-            Assert.assertEquals(this.appliedDiscount.getText(), "-$24.00");
-            Assert.assertEquals(this.orderTotal.getText(), "$92.00");
-            this.greenGwynQuantity.click();
-            this.greenGwynQuantity.type("3");
-            this.updateCartButton.click();
-            pause(5);
-            Assert.assertEquals(this.orderTotal.getText(), "$87.00");
-//        }
+        this.shippingHeading.click();
+        this.shippingCountry.click();
+        this.unitedKingdomOption.click();
+        pause(5);
+        Assert.assertEquals(this.appliedDiscount.getText(), "-$24.00");
+        Assert.assertEquals(this.orderTotal.getText(), "$92.00");
+        this.greenGwynQuantity.click();
+        this.greenGwynQuantity.type("3");
+        this.updateCartButton.click();
+        pause(5);
+        Assert.assertEquals(this.orderTotal.getText(), "$87.00");
     }
 
     public GwynEnduranceTeePage openGwynItemPage() {
